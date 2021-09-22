@@ -11,7 +11,7 @@ class Student (var stuName: String, var stuBirthYear: Int,
 }
 
 class Lecturer (var lecName: String, var lecBirthYear: Int,
-                degree: String, var experienceFrom: Int)
+                var degree: String, var experienceFrom: Int)
     : Person(lecName,lecBirthYear){
     override fun toString(): String {
         return ("name: $lecName, birth year: $lecBirthYear, degree: $degree, experienceFrom: $experienceFrom")
