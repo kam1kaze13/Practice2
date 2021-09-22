@@ -4,11 +4,19 @@ open class Person (var name: String, var birthYear: Int){
 
 class Student (var stuName: String, var stuBirthYear: Int,
                var averageGrade: Double, var extramural: Boolean = false)
-    : Person(stuName,stuBirthYear)
+    : Person(stuName,stuBirthYear){
+    override fun toString(): String {
+        return ("name: $stuName, birth year: $stuBirthYear, average grade: $averageGrade, extramural: $extramural")
+    }
+}
 
 class Lecturer (var lecName: String, var lecBirthYear: Int,
-                var degree: String, var experienceFrom: Int)
-    : Person(lecName,lecBirthYear)
+                degree: String, var experienceFrom: Int)
+    : Person(lecName,lecBirthYear){
+    override fun toString(): String {
+        return ("name: $lecName, birth year: $lecBirthYear, degree: $degree, experienceFrom: $experienceFrom")
+    }
+}
 
 fun main() {
     val persons = mutableListOf<Person>(Student("Alex",2000,4.1),
